@@ -4,5 +4,5 @@ import {darkTheme, lightTheme} from '../Theme/Colors';
 export const useColors = () => {
   const {theme} = useTheme();
 
-  return theme === 'dark' ? darkTheme : lightTheme;
+  return theme === 'light' ? lightTheme : darkTheme;
 };

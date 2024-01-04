@@ -12,7 +12,7 @@ const ImagesPath = '../../../assets/images';
 
 export const BreathImage = require(`${ImagesPath}/BreathImage.png`);
 export const DiaryImage = require(`${ImagesPath}/DiaryImage.png`);
-export const GirlExercise = require(`${ImagesPath}/GirlExercise.png`);
+export const GirlExerciseImage = require(`${ImagesPath}/GirlExerciseImage.png`);
 export const GoalsImage = require(`${ImagesPath}/GoalsImage.png`);
 export const HelpLineImage = require(`${ImagesPath}/HelpLineImage.png`);
 export const JournalImage = require(`${ImagesPath}/JournalImage.png`);
