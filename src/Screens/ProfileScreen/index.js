@@ -2,12 +2,12 @@ import {View, Text} from 'react-native';
 import React from 'react';
 import Header from '../../components/Header';
 
-const SettingsScreen = () => {
+const ProfileScreen = () => {
   return (
     <View>
-      <Header text={'Settings'} />
+      <Header text={'Profile'} />
     </View>
   );
 };
 
-export default SettingsScreen;
+export default ProfileScreen;

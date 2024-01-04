@@ -17,11 +17,14 @@ import {
 } from 'react-native';
 import Navigations from './src/Navigations/Navigations';
 import AllContexts from './src/Context';
+import {useColors} from './src/Hooks';
 
 function App(): JSX.Element {
   return (
     <AllContexts>
-      <Navigations />
+      <SafeAreaView style={{flex: 1, backgroundColor: '#FFF'}}>
+        <Navigations />
+      </SafeAreaView>
     </AllContexts>
   );
 }
