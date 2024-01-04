@@ -6,14 +6,15 @@ import {useNavigation} from '@react-navigation/native';
 
 const Header = ({text}) => {
   const Colors = useColors();
-  const navigation = useNavigation();
+  // const navigation = useNavigation();
   return (
     <View
       style={{
         flexDirection: 'row',
         backgroundColor: Colors.primary,
-        paddingVertical: 25,
+        paddingVertical: 17,
         paddingLeft: 20,
+        alignItems: 'center',
       }}>
       <TouchableOpacity activeOpacity={0.5}>
         <Image
@@ -21,7 +22,9 @@ const Header = ({text}) => {
           style={{width: 24, height: 20, marginRight: 20}}
         />
       </TouchableOpacity>
-      <Text style={{color: Colors.white, fontWeight: '700'}}>{text}</Text>
+      <Text style={{color: Colors.white, fontWeight: '700', fontSize: 23}}>
+        {text}
+      </Text>
     </View>
   );
 };
