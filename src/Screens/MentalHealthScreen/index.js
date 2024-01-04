@@ -74,17 +74,6 @@ const MentalHealthScreen = ({navigation}) => {
           renderItem={renderItem}
         />
       </View>
-
-      {/*
-        
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card /> */}
     </View>
   );
 };
