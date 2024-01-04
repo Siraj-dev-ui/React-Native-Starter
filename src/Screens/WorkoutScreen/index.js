@@ -1,8 +1,9 @@
-import {View, Text, FlatList} from 'react-native';
+import {View, Text, FlatList, TouchableOpacity} from 'react-native';
 import React from 'react';
 import Header from '../../components/Header';
 import {useColors} from '../../Hooks';
 import DayCount from './DayCount';
+import ButtonFull from '../../components/ButtonFull';
 
 const WorkoutScreen = () => {
   const Colors = useColors();
@@ -44,8 +45,6 @@ const WorkoutScreen = () => {
     {dayCount: 30},
   ];
 
-  console.log(days);
-
   const renderItem = ({item}) => {
     return <DayCount {...item} />;
   };
@@ -53,7 +52,7 @@ const WorkoutScreen = () => {
     <View style={{flex: 1}}>
       <Header text={'Workout'} />
       <View style={{paddingVertical: 12, paddingHorizontal: 20}}>
-        <Text style={{fontSize: 32, color: Colors.primary}}>
+        <Text style={{fontSize: 32, color: Colors.primary, marginBottom: 10}}>
           Level <Text style={{fontWeight: '700'}}>1</Text>
         </Text>
         <FlatList
@@ -62,12 +61,30 @@ const WorkoutScreen = () => {
           data={days}
           renderItem={renderItem}
         />
-      </View>
+        <Text
+          style={{
+            fontWeight: '700',
+            fontSize: 16,
+            color: Colors.black,
+            marginTop: 25,
+            marginBottom: 10,
+          }}>
+          Progress
+        </Text>
 
-      <Text>Progress</Text>
-
-      <View style={{flexDirection: 'row'}}>
-        <ProgressComp />
+        <View style={{flexDirection: 'row', marginBottom: 15}}>
+          <ProgressComp
+            text={'Days Completed'}
+            number={6}
+            style={{marginRight: 4, backgroundColor: Colors.bgOrange100}}
+          />
+          <ProgressComp
+            text={'Days Remaining'}
+            number={2}
+            style={{marginLeft: 4, backgroundColor: Colors.bgOrange100}}
+          />
+        </View>
+        <ButtonFull title={'Start'} />
       </View>
     </View>
   );
@@ -75,22 +92,28 @@ const WorkoutScreen = () => {
 
 export default WorkoutScreen;
 
-const ProgressComp = () => {
+const ProgressComp = ({text, number, style}) => {
   return (
     <View
       style={{
+        ...style,
         flexDirection: 'row',
         flex: 1,
         justifyContent: 'space-between',
         alignItems: 'center',
+        paddingHorizontal: 19,
+        paddingVertical: 8,
+        borderRadius: 7,
       }}>
-      <View>
-        <Text>Days</Text>
-        <Text>Completed</Text>
+      <View style={{flex: 1, marginRight: 30}}>
+        <Text style={{color: 'rgba(0, 0, 0, 1)'}}>{text}</Text>
+        {/* <Text>Days</Text>
+        <Text>Completed</Text> */}
       </View>
-      <View>
-        <Text>6</Text>
-      </View>
+      <Text
+        style={{fontWeight: '700', fontSize: 40, color: 'rgba(0, 0, 0, 1)'}}>
+        {number}
+      </Text>
     </View>
   );
 };

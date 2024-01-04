@@ -1,6 +1,7 @@
 import {View, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {useColors} from '../../Hooks';
+import {useNavigation} from '@react-navigation/native';
 
 const DayCount = ({
   dayCount,
@@ -9,9 +10,10 @@ const DayCount = ({
   margin,
 }) => {
   const Colors = useColors();
-  // console.log('in day count', dayCount);
+  const navigation = useNavigation();
   return (
     <TouchableOpacity
+      onPress={() => navigation.navigate('DayScreen', {dayCount})}
       activeOpacity={0.5}
       style={{
         flex: 1,

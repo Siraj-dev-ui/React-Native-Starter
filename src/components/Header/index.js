@@ -4,7 +4,7 @@ import {useColors} from '../../Hooks';
 import {leftArrowIcon} from '../../Theme/IconsImages';
 import {useNavigation} from '@react-navigation/native';
 
-const Header = ({text}) => {
+const Header = ({text, dayCount}) => {
   const Colors = useColors();
   // const navigation = useNavigation();
   return (
@@ -25,6 +25,20 @@ const Header = ({text}) => {
       <Text style={{color: Colors.white, fontWeight: '700', fontSize: 23}}>
         {text}
       </Text>
+
+      {dayCount && (
+        <View
+          style={{
+            marginLeft: 15,
+            paddingHorizontal: 11,
+            paddingVertical: 5,
+            borderWidth: 1,
+            borderRadius: 15,
+            borderColor: Colors.white,
+          }}>
+          <Text style={{color: Colors.white}}>Day {dayCount}</Text>
+        </View>
+      )}
     </View>
   );
 };
