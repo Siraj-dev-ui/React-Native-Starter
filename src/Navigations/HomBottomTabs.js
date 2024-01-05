@@ -57,7 +57,7 @@ const HomeBottomTabs = () => {
           tabBarIcon: ({color}) => (
             <View
               style={{
-                backgroundColor: 'white',
+                backgroundColor: Colors.white,
                 padding: 10,
                 borderRadius: 25,
                 marginBottom: 30,

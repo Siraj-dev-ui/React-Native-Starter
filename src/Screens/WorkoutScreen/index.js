@@ -1,4 +1,4 @@
-import {View, Text, FlatList, TouchableOpacity, ScrollView} from 'react-native';
+import {View, Text, FlatList, ScrollView} from 'react-native';
 import React from 'react';
 import Header from '../../components/Header';
 import {useColors} from '../../Hooks';
@@ -51,7 +51,7 @@ const WorkoutScreen = () => {
   return (
     <View style={{flex: 1}}>
       <Header text={'Workout'} />
-      <View style={{paddingVertical: 12, paddingHorizontal: 20}}>
+      <ScrollView style={{paddingVertical: 12, paddingHorizontal: 20}}>
         <Text style={{fontSize: 32, color: Colors.primary, marginBottom: 10}}>
           Level <Text style={{fontWeight: '700'}}>1</Text>
         </Text>
@@ -86,7 +86,7 @@ const WorkoutScreen = () => {
         </View>
 
         <ButtonFull title={'Start'} style={{marginBottom: 40}} />
-      </View>
+      </ScrollView>
     </View>
   );
 };
