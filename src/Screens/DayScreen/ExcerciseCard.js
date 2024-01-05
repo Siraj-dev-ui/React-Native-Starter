@@ -13,7 +13,7 @@ const ExcerciseCard = ({text}) => {
         justifyContent: 'space-between',
         alignItems: 'center',
         borderRadius: 7,
-        backgroundColor: 'white',
+        backgroundColor: Colors.white,
         shadowColor: '#000',
         shadowOffset: {
           width: 0,

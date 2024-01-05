@@ -1,4 +1,4 @@
-import {View, Text, FlatList, TouchableOpacity, ScrollView} from 'react-native';
+import {View, Text, FlatList, ScrollView} from 'react-native';
 import React from 'react';
 import Header from '../../components/Header';
 import {useColors} from '../../Hooks';

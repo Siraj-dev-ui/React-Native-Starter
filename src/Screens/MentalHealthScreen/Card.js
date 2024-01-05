@@ -1,7 +1,6 @@
-import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {Text, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {useColors} from '../../Hooks';
-import {JournalImage} from '../../Theme/IconsImages';
 
 const Card = ({title, image, onPress}) => {
   const Colors = useColors();
@@ -22,7 +21,7 @@ const Card = ({title, image, onPress}) => {
         source={image}
         style={{width: 54, height: 54, resizeMode: 'contain'}}
       />
-      <Text style={{color: 'black', marginTop: 8}}>{title}</Text>
+      <Text style={{color: Colors.black, marginTop: 8}}>{title}</Text>
     </TouchableOpacity>
   );
 };
